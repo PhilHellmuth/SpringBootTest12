@@ -20,7 +20,12 @@ public class StudentService {
     @Autowired
     private StudentRepository studentRepository;
     
+    //unnecessary comment
     public List<Student> getAllStudents(){
         return studentRepository.getAllStudents();
+    }
+    
+    public Student getRandomStudent(){
+        return studentRepository.getRandomStudent();
     }
 }

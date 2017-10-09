@@ -8,6 +8,7 @@ package com.bab.springboottest12.repository;
 import com.bab.springboottest12.entity.Student;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -36,5 +37,10 @@ public class InMemoryStudentRepository implements StudentRepository{
     
     public List<Student> getAllStudents(){
         return studentList;
+    }
+    
+    public Student getRandomStudent(){
+        int randomStudentIndex = ThreadLocalRandom.current().nextInt(0, studentList.size());
+        return studentList.get(randomStudentIndex);
     }
 }

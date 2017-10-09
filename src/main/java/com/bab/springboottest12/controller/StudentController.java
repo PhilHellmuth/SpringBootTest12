@@ -28,4 +28,9 @@ public class StudentController {
     public List<Student> getAllStudents(){
         return studentService.getAllStudents();
     }
+    
+    @RequestMapping(value = "/random", method = RequestMethod.GET)
+    public Student getRandomStudent(){
+        return studentService.getRandomStudent();
+    }
 }
