@@ -20,4 +20,9 @@ public class GreetingsController {
     public String greetings(){
         return "Greetings, app is running";
     }
+    
+    @RequestMapping(value = "/hungariangreetings", method = RequestMethod.GET)
+    public String hungarianGreetings(){
+        return "Csagec";
+    }
 }
